@@ -20,7 +20,7 @@ $pb = $isPink ? '110px' : ($isPost ? '40px' : '120px');
         <span>WayloShare</span>
       </a>
       <p><strong>Why Go Solo?</strong> Verified carpooling for India. Fares capped per km, every seat verified, and a women-only Pink Ride.</p>
-      <span class="sf-made"><i></i>Made in Jammu, J&amp;K</span>
+      <span class="sf-made"><i></i>Made in India with love</span>
     </div>
     <nav class="sf-cols" aria-label="Footer">
       <div>

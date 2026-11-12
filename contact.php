@@ -150,8 +150,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Meta details for head.php
-$page_title = 'Contact WayloShare | Talk to our team in Jammu';
-$page_description = 'Have questions about a ride, payment, driver verification or Pink Ride? Talk to a real person from the WayloShare team in Jammu.';
+$page_title = 'Contact WayloShare | Made in India with love';
+$page_description = 'Have questions about a ride, payment, driver verification or Pink Ride? Talk to a real person from the WayloShare support team.';
 $current_page = 'contact';
 $page_css = 'contact.css';
 
@@ -166,7 +166,7 @@ require_once __DIR__ . '/includes/nav.php';
   <div style="height: 88px" aria-hidden="true"></div>
   <div style="position: relative; max-width: 1280px; margin: 0 auto; padding: 64px clamp(16px, 4vw, 48px) 0; display: flex; flex-direction: column; gap: 20px">
     <h1 style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-weight: 700; font-size: clamp(48px, 7vw, 96px); line-height: 0.96; letter-spacing: -2.4px">Talk to a real person.</h1>
-    <p style="margin: 0; font-size: 21px; line-height: 1.5; max-width: 600px; color: #E3EEF8">Questions about a ride, a payment, driver verification or a partnership — the WayloShare team in Jammu reads every message.</p>
+    <p style="margin: 0; font-size: 21px; line-height: 1.5; max-width: 600px; color: #E3EEF8">Questions about a ride, a payment, driver verification or a partnership — the WayloShare team reads every message.</p>
   </div>
 </header>
 
@@ -314,7 +314,7 @@ require_once __DIR__ . '/includes/nav.php';
   <div style="max-width: 1280px; margin: 0 auto; border-radius: 32px; overflow: hidden; display: flex; flex-wrap: wrap; background: #13294B; color: #ffffff">
     <div style="flex: 1 1 380px; min-width: 0; padding: clamp(28px, 4vw, 52px); display: flex; flex-direction: column; gap: 14px">
       <span style="font-size: 16px; color: #9CC8F0; font-weight: 700; letter-spacing: .6px">VISIT US</span>
-      <h2 style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-size: 40px; line-height: 1.05">Jammu office</h2>
+      <h2 style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-size: 40px; line-height: 1.05">Registered office</h2>
       <p style="margin: 0; font-size: 19px; line-height: 1.55; color: #C9D6E6">Sec-2 Model Town Gangyal,<br>Jammu, Jammu and Kashmir 180010</p>
       <p style="margin: 0; font-size: 17px; color: #C9D6E6"><?= e($cfg['office_hours']) ?></p>
       <a href="https://maps.google.com/?q=Model+Town+Gangyal+Jammu" target="_blank" rel="noopener" style="align-self: flex-start; background: #ffffff; color: #13294B; text-decoration: none; font-weight: 700; padding: 13px 20px; border-radius: 14px">Get directions</a>

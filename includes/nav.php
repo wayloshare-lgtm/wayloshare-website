@@ -43,7 +43,7 @@ $menuStops = [
         'km'    => '4',
         'url'   => url('/about'),
         'name'  => 'About',
-        'desc'  => 'Our story, starting in Jammu',
+        'desc'  => 'Our story, building for India',
         'match' => ($currentPage === 'about')
     ],
     [
@@ -124,7 +124,7 @@ $menuStops = [
         </div>
         <div class="rm-meta">
           <a href="mailto:<?= e($cfg['email_to']) ?>"><?= e($cfg['email_to']) ?></a>
-          <span>Jammu, J&amp;K · Made in India</span>
+          <span>Made in India with love</span>
         </div>
       </aside>
     </div>

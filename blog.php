@@ -82,7 +82,7 @@ require_once __DIR__ . '/includes/nav.php';
       <h1 class="rise" style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-weight: 700; font-size: clamp(64px, 13vw, 190px); line-height: 0.84; letter-spacing: -6px">Road Journal</h1>
       <span class="hand" style="position: absolute; right: 2%; bottom: -14px; font-size: clamp(22px, 2.4vw, 32px); color: #C72561; transform: rotate(-4deg)">safar ki baatein ✎</span>
     </div>
-    <p style="margin: 18px 0 0; font-size: 21px; line-height: 1.5; max-width: 640px; color: #34465F">Route guides, safety notes, and what we learn from people sharing cars every day, from Jammu to the rest of India.</p>
+    <p style="margin: 18px 0 0; font-size: 21px; line-height: 1.5; max-width: 640px; color: #34465F">Route guides, safety notes, and what we learn from people sharing cars every day, across the highways of India.</p>
   </div>
 </section>
 

@@ -7,8 +7,8 @@ require_once __DIR__ . '/includes/functions.php';
 
 $cfg = config();
 
-$page_title = 'About WayloShare | Started in Jammu, built for Indian roads';
-$page_description = 'WayloShare is verified carpooling for India. Started in Jammu, J&K, we connect verified drivers with passengers sharing the same highway route.';
+$page_title = 'About WayloShare | Made in India with love';
+$page_description = 'WayloShare is verified carpooling for India. Made in India with love, we connect verified drivers with passengers sharing the same highway route.';
 $current_page = 'about';
 $page_css = 'about.css';
 
@@ -26,7 +26,7 @@ require_once __DIR__ . '/includes/nav.php';
       <span class="pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #7FD28F"></span>
       WHY GO SOLO? · THE WAYLOSHARE STORY
     </div>
-    <h1 style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-weight: 700; font-size: clamp(48px, 7.4vw, 104px); line-height: 0.95; letter-spacing: -2.6px; max-width: 1100px">Started in Jammu.<br>Built for every road in India.</h1>
+    <h1 style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-weight: 700; font-size: clamp(48px, 7.4vw, 104px); line-height: 0.95; letter-spacing: -2.6px; max-width: 1100px">Made in India with love.<br>Built for every road in India.</h1>
     <p style="margin: 0; font-size: 22px; line-height: 1.55; max-width: 720px; color: #C9D6E6">Every day, cars leave Indian cities with empty seats while commuters struggle with surge fares, packed trains, or unvetted strangers. WayloShare bridges the verification gap.</p>
   </div>
   <div style="position: absolute; left: 0; right: 0; bottom: 0; height: 70px; background: #2D7E3C" aria-hidden="true">
@@ -94,7 +94,7 @@ require_once __DIR__ . '/includes/nav.php';
       </div>
 
       <p style="margin: 0">
-        Today, WayloShare is head-quartered in Jammu, J&amp;K, connecting verified commuters across NH44 and the North, with expansion underway across India. Why go solo when you can share the journey safely, save money, and cut highway emissions?
+        Today, WayloShare connects verified commuters across NH44, Northern corridors, and expanding inter-city highways nationwide. Why go solo when you can share the journey safely, save money, and cut highway emissions?
       </p>
     </div>
   </div>
@@ -129,7 +129,7 @@ require_once __DIR__ . '/includes/nav.php';
     <div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
       <span style="font-size: 15px; font-weight: 700; letter-spacing: 1px; color: #7FD28F">CITIES &amp; HIGHWAYS</span>
       <h2 style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-size: clamp(36px, 4.4vw, 56px); line-height: 1; letter-spacing: -1.4px">Where WayloShare is on the road</h2>
-      <p style="margin: 0; font-size: 18px; line-height: 1.55; color: #C9D6E6">Starting from our home in Jammu across NH44 and the north, and expanding to major inter-city routes nationwide.</p>
+      <p style="margin: 0; font-size: 18px; line-height: 1.55; color: #C9D6E6">Connecting verified commuters across NH44 and expanding to major inter-city routes nationwide.</p>
       <span style="font-size: 14px; color: #9CC8F0"><?= e($cfg['launch_cities']) ?></span>
     </div>
 
@@ -155,7 +155,7 @@ require_once __DIR__ . '/includes/nav.php';
     <div style="display: flex; flex-direction: column; gap: 10px">
       <span style="font-size: 15px; font-weight: 800; letter-spacing: 2px; color: #2775BA; text-transform: uppercase">LEADERSHIP</span>
       <h2 style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-size: clamp(36px, 4.6vw, 60px); line-height: 1.02; letter-spacing: -1.5px">The people behind the wheel</h2>
-      <p style="margin: 0; font-size: 19px; color: #52627A; max-width: 680px">Founded in Jammu with an uncompromising commitment to safe, trusted, and verified highway carpooling.</p>
+      <p style="margin: 0; font-size: 19px; color: #52627A; max-width: 680px">Built in India with love and an uncompromising commitment to safe, trusted, and verified highway carpooling.</p>
     </div>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
@@ -188,7 +188,7 @@ require_once __DIR__ . '/includes/nav.php';
         <div style="display: flex; flex-direction: column; gap: 12px">
           <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #7FD28F"><span class="pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #7FD28F"></span>WHY GO SOLO?</span>
           <h3 style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-size: 32px; font-weight: 700; line-height: 1.1">Build the future of Indian mobility with us.</h3>
-          <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #E3EEF8">We are looking for passionate engineers, community builders, and safety leaders to join our mission in Jammu.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #E3EEF8">We are looking for passionate engineers, community builders, and safety leaders to join our mission across India.</p>
         </div>
         <a href="mailto:<?= e($cfg['email_to']) ?>" style="align-self: flex-start; background: #ffffff; color: #13294B; text-decoration: none; font-weight: 700; font-size: 16px; padding: 13px 24px; border-radius: 14px; transition: transform .2s" class="lift">Get in touch →</a>
       </div>
