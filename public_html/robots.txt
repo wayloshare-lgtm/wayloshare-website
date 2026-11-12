@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /storage/
+Disallow: /includes/
+Disallow: /data/
+Disallow: /get
+
+Sitemap: https://www.wayloshare.com/sitemap.xml
+

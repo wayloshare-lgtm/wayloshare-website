@@ -1,0 +1,92 @@
+# WayloShare Apache Configuration for Hostinger
+Options -Indexes
+Options +FollowSymLinks
+
+# Custom 404 Error Page
+ErrorDocument 404 /404.php
+
+# Block access to sensitive system directories
+RewriteEngine On
+RewriteBase /
+
+# 1. Deny access to protected folders
+RewriteRule ^(includes|data|storage)/.*$ - [F,L]
+
+# 2. Canonical Host and HTTPS Enforcement
+# Redirect non-www to www on live domain
+RewriteCond %{HTTP_HOST} ^wayloshare\.com$ [NC]
+RewriteRule ^(.*)$ https://www.wayloshare.com/$1 [R=301,L]
+
+# Force HTTPS in production (exclude localhost for local testing)
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:[0-9]+)?$ [NC]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# 3. 301 Redirect any direct .php request to clean URL
+# (Using THE_REQUEST prevents rewrite loops from internal rewrites)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/index\.php [NC]
+RewriteRule ^index\.php$ / [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/([^.]+)\.php [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# 4. Clean URL Rewrites
+# Sitemap rewrite
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+# Smart app link
+RewriteRule ^get/?$ get.php [L,QSA]
+
+# Blog single post: /blog/{slug} -> post.php?slug={slug}
+RewriteRule ^blog/([a-zA-Z0-9\-_]+)/?$ post.php?slug=$1 [L,QSA]
+
+# Blog listing: /blog -> blog.php
+RewriteRule ^blog/?$ blog.php [L,QSA]
+
+# Map clean URLs to existing .php files (e.g. /pink-ride -> pink-ride.php)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L,QSA]
+
+# 5. Security Headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# 6. Gzip / Deflate Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/json application/xml application/xhtml+xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# 7. Browser Caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+
+  # HTML: do not cache HTML pages aggressively
+  ExpiresByType text/html "access plus 0 seconds"
+
+  # Static Assets: cache for 1 year (cache-busting handled via ?v=filemtime in asset())
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # 1 year cache header for assets
+  <FilesMatch "\.(css|js|jpg|jpeg|png|webp|svg|woff2)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+</IfModule>
+
