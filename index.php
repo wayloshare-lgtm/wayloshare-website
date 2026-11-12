@@ -515,25 +515,6 @@ require_once __DIR__ . '/includes/nav.php';
   </div>
 </section>
 
-<footer class="site-foot" style="--fb: #13294B; --fm: #C9D6E6; --fa: #7FD28F; padding-bottom: 120px">
-  <div class="sf-in">
-    <div class="sf-brand">
-      <a href="<?= url('/') ?>" class="sf-logo"><img src="<?= asset('assets/img/logo.png') ?>" alt=""><span>WayloShare</span></a>
-      <p><strong>Why Go Solo?</strong> Verified carpooling for India. Fares capped per km, every seat verified, and a women-only Pink Ride.</p>
-      <span class="sf-made"><i></i>Made in Jammu, J&amp;K</span>
-    </div>
-    <nav class="sf-cols" aria-label="Footer">
-      <div><span>Ride</span><a href="#fare">Fare calculator</a><a href="#app-tour">How the app works</a><a href="<?= url('/pink-ride') ?>">Pink Ride</a><a href="<?= url('/download') ?>">Download</a></div>
-      <div><span>Company</span><a href="<?= url('/about') ?>">About us</a><a href="<?= url('/blog') ?>">Road Journal</a><a href="<?= url('/contact') ?>">Contact</a><a href="https://www.wayloshare.com/privacy">Privacy policy</a></div>
-    </nav>
-    <div class="sf-app">
-      <img src="<?= asset('assets/img/qr.png') ?>" alt="QR code to download WayloShare">
-      <span><b>Scan to get the app</b>iPhone and Android</span>
-    </div>
-  </div>
-  <div class="sf-legal"><span>© 2026 Wayloshare Private Limited · Sec-2 Model Town Gangyal, Jammu 180010</span><a href="mailto:info@wayloshare.com">info@wayloshare.com</a></div>
-</footer>
-
 <!-- STICKY DOWNLOAD BAR -->
 
 

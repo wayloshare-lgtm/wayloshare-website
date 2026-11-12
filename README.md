@@ -93,9 +93,10 @@ The repository root is organized directly as the Hostinger `public_html` web roo
 
 1. **Update Configuration:**
    - In Hostinger File Manager, open `includes/config.php`.
-   - Update client-confirmed placeholders:
-     - `phone`: Customer support phone number.
-     - `whatsapp`: Official WhatsApp business contact.
+   - Configured live values:
+     - `phone`: Customer support phone number (`+91 8899044501`).
+     - `whatsapp`: Official WhatsApp business contact (`+91 8899044501`).
+     - `support_email`: Official support email (`info@wayloshare.com`).
      - `app_store`: Apple App Store URL (`https://apps.apple.com/us/app/wayloshare/id6811060692`).
      - `play_store`: Google Play Store URL.
      - `smtp`: If using Hostinger SMTP instead of PHP `mail()`, provide mailbox user and password.

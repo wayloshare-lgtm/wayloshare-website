@@ -44,8 +44,8 @@ $pb = $isPink ? '110px' : ($isPost ? '40px' : '120px');
     </div>
   </div>
   <div class="sf-legal">
-    <span>© <?= date('Y') ?> <?= e($cfg['company']) ?> · <?= e($cfg['address']) ?></span>
-    <a href="mailto:<?= e($cfg['email_to']) ?>"><?= e($cfg['email_to']) ?></a>
+    <span>© <?= date('Y') ?> <?= e($cfg['company']) ?> · <?= e($cfg['address']) ?> · Tel / WhatsApp: <a href="tel:<?= preg_replace('/[^\d\+]/', '', $cfg['phone']) ?>" style="color: inherit; text-decoration: none"><?= e($cfg['phone']) ?></a></span>
+    <a href="mailto:<?= e($cfg['support_email']) ?>"><?= e($cfg['support_email']) ?></a>
   </div>
 </footer>
 

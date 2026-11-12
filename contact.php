@@ -183,7 +183,7 @@ require_once __DIR__ . '/includes/nav.php';
           </svg>
         </span>
         <h2 style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-size: 36px">Message sent</h2>
-        <p style="margin: 0; font-size: 18px; color: #45566E; line-height: 1.5">We'll reply to you within <?= e($cfg['response_time']) ?>. For anything urgent, call <?= e($cfg['phone']) ?>.</p>
+        <p style="margin: 0; font-size: 18px; color: #45566E; line-height: 1.5">We'll reply to you within <?= e($cfg['response_time']) ?>. For anything urgent, call <a href="tel:<?= preg_replace('/[^\d\+]/', '', $cfg['phone']) ?>" style="color: #13294B; font-weight: 700"><?= e($cfg['phone']) ?></a>.</p>
         <a href="<?= url('/contact') ?>" style="display: inline-block; text-decoration: none; border: 2px solid #D5E0EC; background: #ffffff; color: #13294B; font: 700 17px 'Mukta', sans-serif; padding: 12px 20px; border-radius: 14px; cursor: pointer">Send another message</a>
       </div>
       <?php else: ?>
@@ -272,7 +272,7 @@ require_once __DIR__ . '/includes/nav.php';
     </div>
 
     <div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
-      <a href="tel:<?= e($cfg['phone']) ?>" class="lift" style="background: #13294B; color: #ffffff; text-decoration: none; border-radius: 24px; padding: 24px; display: flex; gap: 16px; align-items: center">
+      <a href="tel:<?= preg_replace('/[^\d\+]/', '', $cfg['phone']) ?>" class="lift" style="background: #13294B; color: #ffffff; text-decoration: none; border-radius: 24px; padding: 24px; display: flex; gap: 16px; align-items: center">
         <span style="width: 52px; height: 52px; flex-shrink: 0; border-radius: 16px; background: rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path>
@@ -284,14 +284,14 @@ require_once __DIR__ . '/includes/nav.php';
         </span>
       </a>
 
-      <a href="https://wa.me/<?= e($cfg['whatsapp']) ?>" target="_blank" rel="noopener" class="lift" style="background: #2D7E3C; color: #ffffff; text-decoration: none; border-radius: 24px; padding: 24px; display: flex; gap: 16px; align-items: center">
+      <a href="https://wa.me/<?= preg_replace('/[^\d]/', '', $cfg['whatsapp']) ?>" target="_blank" rel="noopener" class="lift" style="background: #2D7E3C; color: #ffffff; text-decoration: none; border-radius: 24px; padding: 24px; display: flex; gap: 16px; align-items: center">
         <span style="width: 52px; height: 52px; flex-shrink: 0; border-radius: 16px; background: rgba(255,255,255,0.14); display: flex; align-items: center; justify-content: center">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path>
           </svg>
         </span>
         <span style="display: flex; flex-direction: column">
-          <span style="font-size: 15px; color: #E4F1E6">WhatsApp <?= e($cfg['whatsapp']) ?></span>
+          <span style="font-size: 15px; color: #E4F1E6">WhatsApp <?= e($cfg['phone']) ?></span>
           <span style="font-size: 22px; font-weight: 700">Chat with support</span>
         </span>
       </a>

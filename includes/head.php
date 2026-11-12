@@ -76,7 +76,8 @@ $themeColor = ($current_page === 'pink-ride') ? '#C72561' : (($current_page === 
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "email": "<?= e($cfg['email_to']) ?>",
+    "telephone": "+91-8899044501",
+    "email": "<?= e($cfg['support_email']) ?>",
     "contactType": "customer service"
   }
 }
