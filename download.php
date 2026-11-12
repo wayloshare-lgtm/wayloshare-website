@@ -11,12 +11,12 @@ $detected = detect_device(); // 'ios', 'android', or 'desktop'
 $detectMessages = [
     'android' => 'Android phone detected — opening Google Play…',
     'ios'     => 'iPhone detected — opening the App Store…',
-    'desktop' => 'You’re on a laptop — scan the QR code with your phone'
+    'desktop' => 'Scan the QR code with your phone camera to download'
 ];
 $detectMsg = $detectMessages[$detected] ?? $detectMessages['desktop'];
 
-$iosBg = ($detected === 'ios') ? '#13294B' : 'rgba(19,41,75,0.45)';
-$andBg = ($detected === 'android') ? '#13294B' : 'rgba(19,41,75,0.45)';
+$iosBg = ($detected === 'android') ? 'rgba(19,41,75,0.45)' : '#13294B';
+$andBg = ($detected === 'ios') ? 'rgba(19,41,75,0.45)' : '#13294B';
 $iosOp = ($detected === 'android') ? '0.6' : '1';
 $andOp = ($detected === 'ios') ? '0.6' : '1';
 
@@ -49,10 +49,9 @@ require_once __DIR__ . '/includes/nav.php';
           <span class="detect-text"><?= e($detectMsg) ?></span>
         </div>
         
-        <div style="display: flex; gap: 6px; flex-wrap: wrap" role="group" aria-label="Preview device" id="device-tabs">
+        <div style="display: flex; gap: 6px; flex-wrap: wrap" role="group" aria-label="Select device" id="device-tabs">
           <button type="button" data-dev="android" aria-pressed="<?= $detected === 'android' ? 'true' : 'false' ?>" class="dev-btn" style="border: <?= $detected === 'android' ? '0' : '1px solid rgba(255,255,255,0.4)' ?>; cursor: pointer; font: <?= $detected === 'android' ? '700' : '600' ?> 15px 'Mukta', sans-serif; padding: 9px 16px; border-radius: 12px; background: <?= $detected === 'android' ? '#ffffff' : 'transparent' ?>; color: <?= $detected === 'android' ? '#13294B' : '#ffffff' ?>">Android</button>
           <button type="button" data-dev="ios" aria-pressed="<?= $detected === 'ios' ? 'true' : 'false' ?>" class="dev-btn" style="border: <?= $detected === 'ios' ? '0' : '1px solid rgba(255,255,255,0.4)' ?>; cursor: pointer; font: <?= $detected === 'ios' ? '700' : '600' ?> 15px 'Mukta', sans-serif; padding: 9px 16px; border-radius: 12px; background: <?= $detected === 'ios' ? '#ffffff' : 'transparent' ?>; color: <?= $detected === 'ios' ? '#13294B' : '#ffffff' ?>">iPhone</button>
-          <button type="button" data-dev="desktop" aria-pressed="<?= $detected === 'desktop' ? 'true' : 'false' ?>" class="dev-btn" style="border: <?= $detected === 'desktop' ? '0' : '1px solid rgba(255,255,255,0.4)' ?>; cursor: pointer; font: <?= $detected === 'desktop' ? '700' : '600' ?> 15px 'Mukta', sans-serif; padding: 9px 16px; border-radius: 12px; background: <?= $detected === 'desktop' ? '#ffffff' : 'transparent' ?>; color: <?= $detected === 'desktop' ? '#13294B' : '#ffffff' ?>">Laptop</button>
         </div>
 
         <div style="display: flex; gap: 12px; flex-wrap: wrap">

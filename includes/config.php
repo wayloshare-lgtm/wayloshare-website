@@ -9,7 +9,7 @@ return [
   'email_to'      => 'info@wayloshare.com',
   'phone'         => '[PHONE]',            // leave the placeholder until the client confirms
   'whatsapp'      => '[WHATSAPP]',
-  'app_store'     => 'https://apps.apple.com/app/[APP-STORE-ID]',
+  'app_store'     => 'https://apps.apple.com/us/app/wayloshare/id6811060692',
   'play_store'    => 'https://play.google.com/store/apps/details?id=com.waylo.share',
   'address'       => 'Sec-2 Model Town Gangyal, Jammu, J&K 180010',
   'company'       => 'Wayloshare Private Limited',

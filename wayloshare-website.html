@@ -872,7 +872,7 @@ html[data-page="home"] .steps4{grid-template-columns:repeat(4,minmax(0,1fr))!imp
           </sc-for>
         </div>
         <div style="display: flex; gap: 12px; flex-wrap: wrap">
-          <a href="https://apps.apple.com/app/[APP-STORE-ID]" style="flex: 1 1 200px; display: flex; align-items: center; gap: 12px; background: {{iosBg}}; color: #ffffff; text-decoration: none; padding: 14px 20px; border-radius: 16px; border: 2px solid #ffffff; opacity: {{iosOp}}"><svg width="26" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"></rect><path d="M11 18h2"></path></svg><span style="display: flex; flex-direction: column; line-height: 1.1"><span style="font-size: 12px; color: #C9D6E6">Download on the</span><span style="font-family: 'Familjen Grotesk', sans-serif; font-size: 24px; font-weight: 600">App Store</span></span></a>
+          <a href="https://apps.apple.com/us/app/wayloshare/id6811060692" style="flex: 1 1 200px; display: flex; align-items: center; gap: 12px; background: {{iosBg}}; color: #ffffff; text-decoration: none; padding: 14px 20px; border-radius: 16px; border: 2px solid #ffffff; opacity: {{iosOp}}"><svg width="26" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"></rect><path d="M11 18h2"></path></svg><span style="display: flex; flex-direction: column; line-height: 1.1"><span style="font-size: 12px; color: #C9D6E6">Download on the</span><span style="font-family: 'Familjen Grotesk', sans-serif; font-size: 24px; font-weight: 600">App Store</span></span></a>
           <a href="https://play.google.com/store/apps/details?id=com.waylo.share" style="flex: 1 1 200px; display: flex; align-items: center; gap: 12px; background: {{andBg}}; color: #ffffff; text-decoration: none; padding: 14px 20px; border-radius: 16px; border: 2px solid #ffffff; opacity: {{andOp}}"><svg width="26" height="28" viewBox="0 0 28 30" aria-hidden="true"><path d="M2 2l14 13L2 28z" fill="#7FD28F"></path><path d="M2 2l19 10-5 3z" fill="#9CC8F0"></path><path d="M2 28l19-10-5-3z" fill="#F2C14E"></path><path d="M21 12l5 3-5 3-5-3z" fill="#F08A7E"></path></svg><span style="display: flex; flex-direction: column; line-height: 1.1"><span style="font-size: 12px; color: #C9D6E6">Get it on</span><span style="font-family: 'Familjen Grotesk', sans-serif; font-size: 24px; font-weight: 600">Google Play</span></span></a>
         </div>
       </div>
@@ -1854,14 +1854,12 @@ class Component extends DCLogic {
     const dev = (this.state && this.state.dev) || this.props.device || 'android';
     const devices = [
       { id: 'android', label: 'Android' },
-      { id: 'ios', label: 'iPhone' },
-      { id: 'desktop', label: 'Laptop' }
+      { id: 'ios', label: 'iPhone' }
     ].map((d) => ({ ...d, active: d.id === dev, idle: d.id !== dev, pick: () => this.setState({ dev: d.id }) }));
     const msg = {
       android: 'Android phone detected — opening Google Play…',
-      ios: 'iPhone detected — opening the App Store…',
-      desktop: 'You’re on a laptop — scan the QR code with your phone'
-    }[dev];
+      ios: 'iPhone detected — opening the App Store…'
+    }[dev] || 'Scan the QR code with your phone camera to download';
     return {
       devices,
       detected: msg,

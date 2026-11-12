@@ -96,7 +96,7 @@ The repository root is organized directly as the Hostinger `public_html` web roo
    - Update client-confirmed placeholders:
      - `phone`: Customer support phone number.
      - `whatsapp`: Official WhatsApp business contact.
-     - `app_store`: Apple App Store URL when live.
+     - `app_store`: Apple App Store URL (`https://apps.apple.com/us/app/wayloshare/id6811060692`).
      - `play_store`: Google Play Store URL.
      - `smtp`: If using Hostinger SMTP instead of PHP `mail()`, provide mailbox user and password.
 
@@ -125,7 +125,7 @@ The repository root is organized directly as the Hostinger `public_html` web roo
 | **3** | **Verified Circle** | Click *Rider*, *Driver*, and *Pink Ride* tabs. Confirm that the ID card updates (name, checks, status stamp) and the top-view car SVG updates seat labels and seat colors. |
 | **4** | **App Tour** | Scroll down to `#app-tour`. Verify that as steps come into view, the phone mockup transitions through the matching screens (1 to 5). Click any step button (01 to 05) to confirm it immediately displays the respective screen. |
 | **5** | **Pink Ride Toggle** | On `/pink-ride`, click *I want a ride* and *I’m driving*. Verify that the button switches and the CTA label changes from *Find Pink rides* to *Post a Pink ride*. |
-| **6** | **Download Page Detection** | Visit `/download` on iPhone, Android, and desktop. Confirm that PHP detects the device user-agent and sets the initial message and store button highlighting. Click the *Android*, *iPhone*, and *Laptop* tabs to verify visual state toggles. |
+| **6** | **Download Page Detection** | Visit `/download` on iPhone, Android, and desktop. Confirm that PHP detects the device user-agent and sets the initial message and store button highlighting. Click the *Android* and *iPhone* tabs to verify visual state toggles. |
 | **7** | **Blog Topic Filter** | Visit `/blog`. Click topic chips (*Routes*, *Safety*, *Pink Ride*, etc.). Verify that post cards filter instantly without a page reload and the URL updates with `?cat=...`. Reload with `?cat=Safety` to verify server-side filtering works without JS. |
 | **8** | **Article & Feedback** | Visit `/blog/jammu-to-chandigarh-shared-car-guide`. Confirm reading progress bar moves with scrolling. In the *Was this guide useful?* widget, click *Yes* or *Not really*. Confirm the prompt disappears and shows the hand-written thanks message. Check that a row was appended to `storage/feedback.csv`. |
 | **9** | **Route-Map Menu** | Click *Menu* in the island bar. Confirm full-screen overlay opens with current stop highlighted by the car icon and "You are here · ". Press <kbd>Esc</kbd> or click the close button to confirm it closes cleanly. |

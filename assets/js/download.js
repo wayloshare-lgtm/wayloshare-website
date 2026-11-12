@@ -12,8 +12,7 @@
 
   const messages = {
     android: 'Android phone detected — opening Google Play…',
-    ios: 'iPhone detected — opening the App Store…',
-    desktop: 'You’re on a laptop — scan the QR code with your phone'
+    ios: 'iPhone detected — opening the App Store…'
   };
 
   tabs.forEach(function (btn) {
@@ -47,12 +46,6 @@
           andBtn.style.opacity = '1';
           iosBtn.style.background = 'rgba(19,41,75,0.45)';
           iosBtn.style.opacity = '0.6';
-        } else {
-          // Desktop: both equal opacity
-          iosBtn.style.background = '#13294B';
-          iosBtn.style.opacity = '1';
-          andBtn.style.background = '#13294B';
-          andBtn.style.opacity = '1';
         }
       }
     });
