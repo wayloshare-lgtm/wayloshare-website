@@ -123,7 +123,7 @@ require_once __DIR__ . '/includes/nav.php';
     
     <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap">
       <span class="stone" style="width: 52px; height: 64px; font-size: 14px"><?= e($post['tag']) ?></span>
-      <span style="font-weight: 700; letter-spacing: 1px; color: #7FD28F"><?= e(strtoupper($post['category'])) ?> · ROUTE GUIDE</span>
+      <span style="font-weight: 700; letter-spacing: 1px; color: #7FD28F"><?= e(strtoupper($post['category'])) ?> · <?= e(strtoupper($post['type'] ?? 'ARTICLE')) ?></span>
     </div>
 
     <h1 class="rise" style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-weight: 700; font-size: clamp(44px, 6.4vw, 92px); line-height: 0.96; letter-spacing: -2.4px; max-width: 1060px">
@@ -131,7 +131,7 @@ require_once __DIR__ . '/includes/nav.php';
     </h1>
 
     <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap; font-size: 17px; color: #C9D6E6">
-      <span style="width: 46px; height: 46px; border-radius: 50%; background: #BFE3C6; border: 2px solid #ffffff"></span>
+      <span style="width: 46px; height: 46px; border-radius: 50%; background: #13294B; border: 2px solid #ffffff; color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px">WS</span>
       <span><b style="color: #ffffff"><?= e($post['author']) ?></b> · <?= e($post['author_role']) ?></span>
       <span>·</span>
       <span><?= date('d M Y', strtotime($post['date'])) ?></span>
@@ -139,7 +139,7 @@ require_once __DIR__ . '/includes/nav.php';
       <span><?= e($post['minutes']) ?> min read</span>
     </div>
 
-    <span class="hand" style="position: absolute; right: clamp(16px, 4vw, 48px); bottom: 30px; font-size: 26px; color: #F2C14E; transform: rotate(-4deg)">pack snacks. trust us.</span>
+    <span class="hand" style="position: absolute; right: clamp(16px, 4vw, 48px); bottom: 30px; font-size: 26px; color: #F2C14E; transform: rotate(-4deg)">verified highway rides ✎</span>
   </div>
 </header>
 
@@ -169,22 +169,22 @@ require_once __DIR__ . '/includes/nav.php';
 
     <!-- STICKY SIDEBAR -->
     <aside style="flex: 1 1 300px; min-width: 0; position: sticky; top: 110px; display: flex; flex-direction: column; gap: 22px">
-      <nav class="toc" aria-label="In this guide" style="display: flex; flex-direction: column; gap: 2px">
-        <span style="font-size: 14px; font-weight: 700; letter-spacing: 1px; color: #52627A; margin-bottom: 8px">IN THIS GUIDE</span>
-        <a href="#route">The route, stone by stone</a>
-        <a href="#pickup">Where to meet your driver</a>
-        <a href="#price">What a fair seat costs</a>
-        <a href="#carry">What to carry</a>
-        <a href="#safety">Riding safely</a>
+      <?php if (!empty($post['toc'])): ?>
+      <nav class="toc" aria-label="In this article" style="display: flex; flex-direction: column; gap: 6px; background: #ffffff; padding: 22px; border-radius: 20px; border: 1.5px solid #D5E0EC">
+        <span style="font-size: 13px; font-weight: 800; letter-spacing: 1.2px; color: #2775BA; text-transform: uppercase">IN THIS ARTICLE</span>
+        <?php foreach ($post['toc'] as $anchor => $label): ?>
+        <a href="#<?= e($anchor) ?>" style="color: #13294B; text-decoration: none; font-size: 15px; line-height: 1.4; padding: 3px 0"><?= e($label) ?></a>
+        <?php endforeach; ?>
       </nav>
+      <?php endif; ?>
 
-      <div style="border-radius: 26px; background: #2775BA; color: #ffffff; padding: 26px; display: flex; flex-direction: column; gap: 12px; position: relative; overflow: hidden">
-        <div style="position: absolute; width: 260px; height: 260px; border-radius: 50%; background: #13294B; filter: blur(70px); right: -90px; bottom: -110px; opacity: .7" aria-hidden="true"></div>
-        <span style="position: relative; font-size: 15px; color: #E3EEF8">Ride this route</span>
-        <span style="position: relative; font-family: 'Familjen Grotesk', sans-serif; font-size: 28px; font-weight: 700; line-height: 1.1">Jammu → Chandigarh</span>
-        <span style="position: relative; font-family: 'Familjen Grotesk', sans-serif; font-size: 44px; font-weight: 700">₹1,103 <span style="font-size: 18px; font-weight: 500">/ seat</span></span>
-        <a href="<?= url('/get?from=Jammu&to=Chandigarh&utm_source=blog&utm_content=sidebar') ?>" class="glass" style="position: relative; color: #ffffff; text-decoration: none; text-align: center; font-weight: 700; font-size: 18px; padding: 14px; border-radius: 14px; background: rgba(255,255,255,0.22)">Find seats in the app</a>
-        <span class="hand" style="position: relative; font-size: 19px; color: #F2C14E">opens your search after install</span>
+      <div style="border-radius: 26px; background: #13294B; color: #ffffff; padding: 26px; display: flex; flex-direction: column; gap: 14px; position: relative; overflow: hidden">
+        <div style="position: absolute; width: 260px; height: 260px; border-radius: 50%; background: #2775BA; filter: blur(70px); right: -90px; bottom: -110px; opacity: .7" aria-hidden="true"></div>
+        <span style="position: relative; font-size: 13px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: #7FD28F">WHY GO SOLO?</span>
+        <span style="position: relative; font-family: 'Familjen Grotesk', sans-serif; font-size: 26px; font-weight: 700; line-height: 1.15">Travel verified across Indian highways.</span>
+        <p style="position: relative; margin: 0; font-size: 15px; line-height: 1.5; color: #C9D6E6">Join thousands of verified commuters saving money and travelling safely on WayloShare.</p>
+        <a href="<?= url('/download') ?>" class="glass" style="position: relative; color: #ffffff; text-decoration: none; text-align: center; font-weight: 700; font-size: 17px; padding: 13px; border-radius: 14px; background: #2775BA">Get the WayloShare App</a>
+        <span class="hand" style="position: relative; font-size: 18px; color: #F2C14E">free on iOS &amp; Android</span>
       </div>
     </aside>
 

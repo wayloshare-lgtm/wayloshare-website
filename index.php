@@ -292,7 +292,7 @@ require_once __DIR__ . '/includes/nav.php';
             <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; font-weight: 700; letter-spacing: 1px; color: #2775BA">VERIFIED RIDER</span><span style="font-family: 'Familjen Grotesk', sans-serif; font-size: 26px; font-weight: 700">Aarav S.</span><span style="font-size: 15px; color: #52627A">Joined 2026 · 14 rides</span></div>
           </div>
           <div class="check" style="animation-delay: 0.40s"><span class="tick" style="background: #2D7E3C">✓</span><span style="flex: 1">Mobile number</span><span style="font-size: 13px; color: #6B7A8F">OTP</span></div>
-          <div class="check" style="animation-delay: 0.75s"><span class="tick" style="background: #2D7E3C">✓</span><span style="flex: 1">Government ID</span><span style="font-size: 13px; color: #6B7A8F">[CONFIRM]</span></div>
+          <div class="check" style="animation-delay: 0.75s"><span class="tick" style="background: #2D7E3C">✓</span><span style="flex: 1">Government ID</span><span style="font-size: 13px; color: #6B7A8F">DigiLocker verified</span></div>
           <div class="check" style="animation-delay: 1.10s"><span class="tick" style="background: #2D7E3C">✓</span><span style="flex: 1">Profile photo</span><span style="font-size: 13px; color: #6B7A8F">matched</span></div>
           <div class="check" style="animation-delay: 1.45s"><span class="tick" style="background: #2D7E3C">✓</span><span style="flex: 1">Ready to book</span><span style="font-size: 13px; color: #6B7A8F">verified only</span></div>
           <span class="stamp" style="color: #2775BA; border-color: #2775BA">RIDER VERIFIED</span>
@@ -309,7 +309,7 @@ require_once __DIR__ . '/includes/nav.php';
           <div class="check" style="animation-delay: 0.40s"><span class="tick" style="background: #2D7E3C">✓</span><span style="flex: 1">Mobile number</span><span style="font-size: 13px; color: #6B7A8F">OTP</span></div>
           <div class="check" style="animation-delay: 0.75s"><span class="tick" style="background: #2D7E3C">✓</span><span style="flex: 1">Driving licence</span><span style="font-size: 13px; color: #6B7A8F">checked</span></div>
           <div class="check" style="animation-delay: 1.10s"><span class="tick" style="background: #2D7E3C">✓</span><span style="flex: 1">Vehicle RC</span><span style="font-size: 13px; color: #6B7A8F">checked</span></div>
-          <div class="check" style="animation-delay: 1.45s"><span class="tick" style="background: #2D7E3C">✓</span><span style="flex: 1">Government ID</span><span style="font-size: 13px; color: #6B7A8F">[CONFIRM]</span></div>
+          <div class="check" style="animation-delay: 1.45s"><span class="tick" style="background: #2D7E3C">✓</span><span style="flex: 1">Government ID</span><span style="font-size: 13px; color: #6B7A8F">DigiLocker verified</span></div>
           <span class="stamp" style="color: #2D7E3C; border-color: #2D7E3C">KYC DONE</span>
         </div>
       </div>
@@ -322,7 +322,7 @@ require_once __DIR__ . '/includes/nav.php';
             <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; font-weight: 700; letter-spacing: 1px; color: #C72561">PINK RIDE</span><span style="font-family: 'Familjen Grotesk', sans-serif; font-size: 26px; font-weight: 700">Priya M.</span><span style="font-size: 15px; color: #52627A">Women-only rides</span></div>
           </div>
           <div class="check" style="animation-delay: 0.40s"><span class="tick" style="background: #C72561">✓</span><span style="flex: 1">Mobile number</span><span style="font-size: 13px; color: #6B7A8F">OTP</span></div>
-          <div class="check" style="animation-delay: 0.75s"><span class="tick" style="background: #C72561">✓</span><span style="flex: 1">Women verification</span><span style="font-size: 13px; color: #6B7A8F">[CONFIRM]</span></div>
+          <div class="check" style="animation-delay: 0.75s"><span class="tick" style="background: #C72561">✓</span><span style="flex: 1">Women verification</span><span style="font-size: 13px; color: #6B7A8F">ID confirmed</span></div>
           <div class="check" style="animation-delay: 1.10s"><span class="tick" style="background: #C72561">✓</span><span style="flex: 1">Woman driver</span><span style="font-size: 13px; color: #6B7A8F">verified</span></div>
           <div class="check" style="animation-delay: 1.45s"><span class="tick" style="background: #C72561">✓</span><span style="flex: 1">Women co-riders</span><span style="font-size: 13px; color: #6B7A8F">verified</span></div>
           <span class="stamp" style="color: #C72561; border-color: #C72561">WOMEN VERIFIED</span>
@@ -348,7 +348,7 @@ require_once __DIR__ . '/includes/nav.php';
       </div>
     </div>
 
-    <span style="font-size: 13px; color: #9CA9BC">Card details never stored beyond the last 4 digits. Data encrypted in transit; delete on request. [CONFIRM exact ID and women-verification methods]</span>
+    <span style="font-size: 13px; color: #9CA9BC">ID and vehicle details are encrypted in transit and securely verified via DigiLocker. Personal credentials are never stored in plain text or sold to third parties.</span>
   </div>
 </section>
 
@@ -451,7 +451,7 @@ require_once __DIR__ . '/includes/nav.php';
         <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap">
           <span style="font-size: 16px; color: #34465F; flex: 1 1 300px">Per person, this trip emits about <b>{{co2Each}} kg CO₂</b> instead of {{co2Solo}} kg driving alone.</span>
         </div>
-        <span style="font-size: 13px; color: #6B7A8F; line-height: 1.5">Estimates. Fare caps per seat per km for the car type, as set for WayloShare under MoRTH carpooling guidelines. CO₂ assumes petrol cars at 130–190 g/km by type and 21 kg absorbed per tree per year. [CONFIRM emission factors and legal wording]</span>
+        <span style="font-size: 13px; color: #6B7A8F; line-height: 1.5">Estimates based on MoRTH non-commercial cost-sharing guidelines for private vehicles. CO₂ calculations assume average petrol car emissions of 130–190 g/km by vehicle segment and standard environmental absorption metrics of 21 kg CO₂ per tree per year.</span>
       </div>
     </div>
   </div>

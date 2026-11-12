@@ -336,7 +336,7 @@ require_once __DIR__ . '/includes/nav.php';
           <circle cx="12" cy="12" r="4.5" fill="#ffffff"></circle>
         </svg>
       </div>
-      <span style="position: absolute; right: 16px; bottom: 14px; font-size: 13px; color: #C9D6E6">Embed Google Map here</span>
+      <span style="position: absolute; right: 16px; bottom: 14px; font-size: 13px; color: #C9D6E6">WayloShare Headquarters · Gangyal</span>
     </div>
   </div>
 </section>

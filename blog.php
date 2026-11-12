@@ -10,7 +10,7 @@ $cfg = config();
 $allPosts = get_all_posts();
 
 // Category filter
-$validCategories = ['All', 'Routes', 'Safety', 'Pink Ride', 'Drivers', 'Savings'];
+$validCategories = ['All', 'Safety', 'Pink Ride', 'Technical', 'Savings', 'Guides'];
 $selectedCat = trim($_GET['cat'] ?? 'All');
 if (!in_array($selectedCat, $validCategories, true)) {
     $selectedCat = 'All';
@@ -86,10 +86,12 @@ require_once __DIR__ . '/includes/nav.php';
   </div>
 </section>
 
+<?php $featured = $allPosts[0] ?? null; ?>
+<?php if ($featured): ?>
 <!-- FEATURED GUIDE -->
 <section style="padding: 20px clamp(16px, 4vw, 48px) 70px">
-  <a href="<?= url('/blog/jammu-to-chandigarh-shared-car-guide') ?>" class="feat card" style="max-width: 1280px; margin: 0 auto; flex-direction: row; flex-wrap: wrap; border-color: #13294B; border-width: 3px">
-    <div style="flex: 999 1 560px; min-width: 0; min-height: 420px; background: #13294B; position: relative; overflow: hidden">
+  <a href="<?= url('/blog/' . $featured['slug']) ?>" class="feat card" style="max-width: 1280px; margin: 0 auto; flex-direction: row; flex-wrap: wrap; border-color: #13294B; border-width: 3px; text-decoration: none; color: inherit">
+    <div style="flex: 999 1 560px; min-width: 0; min-height: 420px; background: #13294B; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 40px">
       <svg viewBox="0 0 700 420" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0" aria-hidden="true">
         <defs>
           <pattern id="fg" width="40" height="40" patternUnits="userSpaceOnUse">
@@ -98,32 +100,31 @@ require_once __DIR__ . '/includes/nav.php';
         </defs>
         <rect width="700" height="420" fill="url(#fg)"></rect>
         <path d="M80 350 C 150 300, 160 250, 230 230 S 330 170, 380 150 S 520 120, 620 70" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="22" stroke-linecap="round"></path>
-        <path class="route" d="M80 350 C 150 300, 160 250, 230 230 S 330 170, 380 150 S 520 120, 620 70" fill="none" stroke="#F2C14E" stroke-width="6" stroke-linecap="round" stroke-dasharray="900"></path>
-        <g font-family="Mukta" font-weight="700" font-size="17" fill="#ffffff">
-          <circle cx="80" cy="350" r="10" fill="#7FD28F"></circle><text x="100" y="376">Jammu</text>
-          <circle cx="230" cy="230" r="7" fill="#ffffff"></circle><text x="246" y="256">Pathankot</text>
-          <circle cx="380" cy="150" r="7" fill="#ffffff"></circle><text x="396" y="176">Jalandhar</text>
-          <circle cx="510" cy="112" r="7" fill="#ffffff"></circle><text x="440" y="96">Ludhiana</text>
-          <circle cx="620" cy="70" r="10" fill="#FF8FB8"></circle><text x="560" y="44">Chandigarh</text>
-        </g>
+        <path class="route" d="M80 350 C 150 300, 160 250, 230 230 S 330 170, 380 150 S 520 120, 620 70" fill="none" stroke="#7FD28F" stroke-width="6" stroke-linecap="round" stroke-dasharray="900"></path>
       </svg>
-      <span class="hand" style="position: absolute; left: 24px; top: 20px; font-size: 24px; color: #F2C14E; transform: rotate(-3deg)">most-booked route ↓</span>
+      <div style="position: relative; z-index: 2; display: flex; flex-direction: column; gap: 16px; max-width: 480px; color: #ffffff">
+        <span style="font-size: 14px; font-weight: 800; letter-spacing: 2px; color: #7FD28F; text-transform: uppercase">FEATURED · TRUST ARCHITECTURE</span>
+        <h3 style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.05">Two-way verification: closing the safety gap on Indian highways.</h3>
+        <span style="font-size: 16px; color: #C9D6E6">DigiLocker Government ID + Driving Licence + Facial match for both driver and rider.</span>
+      </div>
+      <span class="hand" style="position: absolute; left: 24px; top: 20px; font-size: 24px; color: #F2C14E; transform: rotate(-3deg)">must-read ↓</span>
     </div>
     <div style="flex: 1 1 380px; min-width: 0; padding: clamp(24px, 3vw, 44px); display: flex; flex-direction: column; gap: 16px; justify-content: center">
       <div style="display: flex; align-items: center; gap: 12px">
-        <span class="stone">NH44</span>
-        <span style="font-weight: 700; color: #2D7E3C; font-size: 16px; letter-spacing: .6px">FEATURED · ROUTES</span>
+        <span class="stone"><?= e($featured['tag']) ?></span>
+        <span style="font-weight: 700; color: #2D7E3C; font-size: 16px; letter-spacing: .6px">FEATURED · <?= strtoupper(e($featured['category'])) ?></span>
       </div>
-      <h2 style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-size: clamp(32px, 3.4vw, 46px); line-height: 1.02; letter-spacing: -1px">Jammu to Chandigarh by shared car: the 368 km guide</h2>
-      <p style="margin: 0; font-size: 18px; line-height: 1.55; color: #45566E">Pickup points, the stops worth making, what a fair seat costs, and how to pick a co-rider you'll actually enjoy six hours with.</p>
+      <h2 style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-size: clamp(32px, 3.4vw, 46px); line-height: 1.02; letter-spacing: -1px"><?= e($featured['title']) ?></h2>
+      <p style="margin: 0; font-size: 18px; line-height: 1.55; color: #45566E"><?= e($featured['excerpt']) ?></p>
       <div style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: #52627A">
-        <span style="width: 36px; height: 36px; border-radius: 50%; background: #BFE3C6"></span>
-        <span><b style="color: #13294B">[AUTHOR NAME]</b> · 8 min read · 14 Oct 2026</span>
+        <span style="width: 36px; height: 36px; border-radius: 50%; background: #13294B; color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px">AS</span>
+        <span><b style="color: #13294B"><?= e($featured['author']) ?></b> · <?= e($featured['minutes']) ?> min read · <?= date('d M Y', strtotime($featured['date'])) ?></span>
       </div>
-      <span style="align-self: flex-start; font-weight: 700; font-size: 17px; color: #13294B; border-bottom: 3px solid #F2C14E">Read the guide →</span>
+      <span style="align-self: flex-start; font-weight: 700; font-size: 17px; color: #13294B; border-bottom: 3px solid #F2C14E">Read the full article →</span>
     </div>
   </a>
 </section>
+<?php endif; ?>
 
 <!-- FILTER + GRID -->
 <section style="padding: 0 clamp(16px, 4vw, 48px) 110px">

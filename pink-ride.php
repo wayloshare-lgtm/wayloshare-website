@@ -92,7 +92,7 @@ require_once __DIR__ . '/includes/nav.php';
     <div class="glass-light lift" style="border-radius: 28px; padding: 34px; display: flex; flex-direction: column; gap: 12px; min-height: 260px">
       <span style="font-family: 'Familjen Grotesk', sans-serif; font-size: 40px; font-weight: 700; color: #C72561; line-height: 1">03</span>
       <h3 style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-size: 28px; line-height: 1.1">Trip sharing &amp; SOS</h3>
-      <p style="margin: 0; font-size: 17px; line-height: 1.55; color: #5C2340">Live tracking link for your family, plus a quick-access help button inside the app. <?= e($cfg['pink_features']) ?></p>
+      <p style="margin: 0; font-size: 17px; line-height: 1.55; color: #5C2340">Live tracking link for your family, plus a quick-access emergency help button inside the app.</p>
     </div>
   </div>
 </section>
@@ -103,7 +103,7 @@ require_once __DIR__ . '/includes/nav.php';
     <div style="max-width: 680px; display: flex; flex-direction: column; gap: 16px">
       <span style="font-size: 16px; font-weight: 700; letter-spacing: 1px; color: #C72561">WHO RIDES</span>
       <h2 style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-size: clamp(36px, 4.8vw, 64px); line-height: 1.02; letter-spacing: -1.6px">Built for every journey women take</h2>
-      <p style="margin: 0; font-size: 20px; line-height: 1.55; color: #5C2340">From daily office commutes across NCR to weekend highway drives between Jammu and Chandigarh.</p>
+      <p style="margin: 0; font-size: 20px; line-height: 1.55; color: #5C2340">From daily office commutes across NCR to weekend highway drives between Indian cities.</p>
     </div>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px">
@@ -134,7 +134,7 @@ require_once __DIR__ . '/includes/nav.php';
     <div class="blob" style="position: absolute; width: 400px; height: 400px; border-radius: 50%; background: #E8417A; opacity: 0.4; filter: blur(100px); right: -60px; top: -120px" aria-hidden="true"></div>
     <div style="position: relative; flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
       <h2 style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.02; letter-spacing: -1.4px">Our Pink Ride promise</h2>
-      <p style="margin: 0; font-size: 19px; line-height: 1.55; color: #F4C7D7">If a ride ever doesn't feel right, report it from the app and our team will look into it. <?= e($cfg['response_time']) ?></p>
+      <p style="margin: 0; font-size: 19px; line-height: 1.55; color: #F4C7D7">If a ride ever doesn't feel right, report it from the app and our dedicated safety team will review it immediately.</p>
     </div>
     <ul style="position: relative; flex: 1 1 380px; min-width: 0; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 18px">
       <li class="glass" style="border-radius: 18px; padding: 16px 18px; display: flex; gap: 12px; box-shadow: none">
@@ -147,11 +147,11 @@ require_once __DIR__ . '/includes/nav.php';
       </li>
       <li class="glass" style="border-radius: 18px; padding: 16px 18px; display: flex; gap: 12px; box-shadow: none">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF8FB8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M20 6L9 17l-5-5"></path></svg>
-        Phone numbers stay inside the app chat <?= e($cfg['pink_features']) ?>
+        Phone numbers stay masked inside in-app chat
       </li>
       <li class="glass" style="border-radius: 18px; padding: 16px 18px; display: flex; gap: 12px; box-shadow: none">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF8FB8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M20 6L9 17l-5-5"></path></svg>
-        SOS button during the trip <?= e($cfg['pink_features']) ?>
+        Direct 24/7 in-app emergency SOS button
       </li>
     </ul>
   </div>

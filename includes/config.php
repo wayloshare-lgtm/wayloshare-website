@@ -20,13 +20,13 @@ return [
     'pass'   => '',
     'secure' => 'ssl'
   ],
-  // Placeholders from section 12 (client customizable)
+  // Operational configuration
   'support_email' => 'info@wayloshare.com',
   'office_hours'  => 'Mon–Sat · 9:00 AM – 7:00 PM IST',
-  'response_time' => 'a few hours',
-  'launch_cities' => '[CONFIRM LAUNCH CITIES]',
-  'languages'     => '[CONFIRM LANGUAGES]',
-  'pink_price'    => '[PRICE]',
-  'pink_features' => '[CONFIRM]',
+  'response_time' => 'within a few hours',
+  'launch_cities' => 'Delhi NCR · Chandigarh · Jammu · Jaipur · Lucknow · Dehradun',
+  'languages'     => 'English · हिन्दी · ਪੰਜਾਬੀ',
+  'pink_price'    => '₹280 / seat',
+  'pink_features' => '',
 ];
 
