@@ -86,7 +86,7 @@ $menuStops = [
 <div class="rmenu" role="dialog" aria-label="Site menu">
   <div class="rm-in">
     <div class="rm-top">
-      <span class="rm-kick">Where to?</span>
+      <span class="rm-kick">Why Go Solo? · Where to?</span>
       <label for="navt" class="rm-close" aria-label="Close menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></label>
     </div>
     <div class="rm-grid">
@@ -115,7 +115,7 @@ $menuStops = [
       </ol>
       <aside class="rm-side">
         <div class="rm-card">
-          <span class="rm-card-k">Verified rides only</span>
+          <span class="rm-card-k">Why Go Solo? · Verified rides</span>
           <span class="rm-card-h">Every driver, rider and co-rider is verified.</span>
           <div class="rm-stores">
             <a href="<?= e($cfg['app_store']) ?>" target="_blank" rel="noopener">App Store</a>

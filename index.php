@@ -10,7 +10,7 @@ require_once __DIR__ . '/data/routes.php';
 $cfg = config();
 $routesData = require __DIR__ . '/data/routes.php';
 
-$page_title = 'WayloShare | Verified carpooling for India';
+$page_title = 'WayloShare | Why Go Solo? · Verified carpooling for India';
 $page_description = 'WayloShare is verified carpooling for India: share a seat, split the cost with fares capped per km, and ride women-only with Pink Ride. Free on iPhone and Android.';
 $current_page = 'home';
 $page_css = 'home.css';
@@ -32,9 +32,11 @@ require_once __DIR__ . '/includes/nav.php';
 
   <div style="position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; padding: 56px clamp(16px, 4vw, 48px) 0; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
     <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 26px">
-      <div class="glass rise" style="align-self: flex-start; border-radius: 999px; padding: 8px 16px 8px 10px; display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 600; box-shadow: none">
+      <div class="glass rise" style="align-self: flex-start; border-radius: 999px; padding: 8px 18px 8px 12px; display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 700; box-shadow: none">
         <span class="pulse" style="width: 10px; height: 10px; border-radius: 50%; background: #7FD28F"></span>
-        Carpooling across India · iOS and Android
+        <span style="font-family: 'Familjen Grotesk', sans-serif; font-size: 15px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #F2C14E">WHY GO SOLO?</span>
+        <span style="opacity: 0.4">·</span>
+        <span style="color: #ffffff; font-weight: 600">Carpooling across India</span>
       </div>
       <h1 class="rise2" style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-weight: 700; font-size: clamp(48px, 7vw, 96px); line-height: 0.96; letter-spacing: -2.5px">Same route.<br>Shared seat.<br><span style="color: #BFE3C6">Half the cost.</span></h1>
       <p class="rise3" style="margin: 0; font-size: 21px; line-height: 1.5; max-width: 560px; color: #E3EEF8">Find a verified driver heading your way, or fill the empty seats in your car. From city commutes to highway trips, from Jammu to Kanyakumari.</p>
@@ -67,7 +69,7 @@ require_once __DIR__ . '/includes/nav.php';
         </div>
       </div>
 
-      <p style="margin: 0; font-size: 16px; color: #E3EEF8">Verified riders and drivers · MoRTH-capped fares · Women-only Pink Ride</p>
+      <p style="margin: 0; font-size: 16px; color: #E3EEF8">Why go solo when you can share? Verified riders &amp; drivers · MoRTH-capped fares · Women-only Pink Ride</p>
     </div>
 
     <!-- phone + floating glass chips -->
@@ -262,7 +264,7 @@ require_once __DIR__ . '/includes/nav.php';
 
 <!-- VERIFIED CIRCLE (USP) -->
 <section id="verified" style="background: #13294B; color: #ffffff; padding: 120px clamp(16px, 4vw, 48px); position: relative; overflow: hidden">
-  <div class="blob" style="position: absolute; width: 520px; height: 520px; border-radius: 50%; background: #2775BA; id="vcircle-glow"; opacity: 0.45; filter: blur(120px); right: -120px; top: 60px" aria-hidden="true"></div>
+  <div class="blob" id="vcircle-glow" style="position: absolute; width: 520px; height: 520px; border-radius: 50%; background: #2775BA; opacity: 0.35; filter: blur(120px); -webkit-filter: blur(120px); right: -120px; top: 60px; pointer-events: none" aria-hidden="true"></div>
   <div style="max-width: 1280px; margin: 0 auto; position: relative; display: flex; flex-direction: column; gap: 50px">
     <div style="display: flex; flex-direction: column; gap: 14px; max-width: 900px">
       <span style="font-size: 16px; font-weight: 700; letter-spacing: 1.4px; color: #7FD28F">THE WAYLOSHARE VERIFIED CIRCLE</span>
@@ -270,12 +272,11 @@ require_once __DIR__ . '/includes/nav.php';
       <p style="margin: 0; font-size: 20px; line-height: 1.55; color: #C9D6E6; max-width: 640px">Riders are verified. Drivers are verified. You only ever share a car with verified people, and Pink Ride adds women verification on top.</p>
     </div>
 
-    <div role="tablist" aria-label="Who is being verified" style="display: flex; gap: 8px; flex-wrap: wrap">
-      
-      <div role="tablist" id="vcircle-tabs" style="display: flex; gap: 8px; flex-wrap: wrap">
-        <button type="button" role="tab" data-vrole="rider" class="vtab" aria-selected="true" style="--tc: #2775BA">Rider</button>
-        <button type="button" role="tab" data-vrole="driver" class="vtab" aria-selected="false" style="--tc: #2D7E3C">Driver</button>
-        <button type="button" role="tab" data-vrole="pink" class="vtab" aria-selected="false" style="--tc: #C72561">Pink Ride (women)</button>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap">
+      <div role="tablist" id="vcircle-tabs" aria-label="Who is being verified" style="display: inline-flex; gap: 8px; flex-wrap: wrap; background: rgba(255,255,255,0.06); padding: 8px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.12)">
+        <button type="button" role="tab" data-vrole="rider" class="vtab" aria-selected="true" style="--tc: #2775BA"><span class="vtab-dot"></span>Rider</button>
+        <button type="button" role="tab" data-vrole="driver" class="vtab" aria-selected="false" style="--tc: #2D7E3C"><span class="vtab-dot"></span>Driver</button>
+        <button type="button" role="tab" data-vrole="pink" class="vtab" aria-selected="false" style="--tc: #E8417A"><span class="vtab-dot"></span>Pink Ride (women)</button>
       </div>
     </div>
 
@@ -500,6 +501,7 @@ require_once __DIR__ . '/includes/nav.php';
   <div style="max-width: 1280px; margin: 0 auto; background: #2775BA; color: #ffffff; border-radius: 36px; padding: clamp(36px, 5vw, 72px); display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: space-between; position: relative; overflow: hidden">
     <div class="blob" style="position: absolute; width: 420px; height: 420px; border-radius: 50%; background: #2D7E3C; opacity: 0.5; filter: blur(90px); right: -80px; bottom: -160px" aria-hidden="true"></div>
     <div style="position: relative; flex: 999 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+      <span style="align-self: flex-start; background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.35); color: #F2C14E; font-weight: 800; font-size: 14px; padding: 6px 14px; border-radius: 999px; letter-spacing: 1.8px; font-family: 'Familjen Grotesk', sans-serif">WHY GO SOLO?</span>
       <h2 style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-size: clamp(38px, 5vw, 68px); line-height: 1; letter-spacing: -1.6px">Your next trip is already going your way.</h2>
       <div style="display: flex; gap: 12px; flex-wrap: wrap">
         <a href="<?= e($cfg['app_store']) ?>" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; background: #13294B; color: #ffffff; text-decoration: none; padding: 12px 22px; border-radius: 14px; border: 2px solid #ffffff"><svg width="24" height="26" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"></rect><path d="M11 18h2"></path></svg><span style="display: flex; flex-direction: column; line-height: 1.1"><span style="font-size: 12px; color: #C9D6E6">Download on the</span><span style="font-family: 'Familjen Grotesk', sans-serif; font-size: 22px; font-weight: 600">App Store</span></span></a>
@@ -517,7 +519,7 @@ require_once __DIR__ . '/includes/nav.php';
   <div class="sf-in">
     <div class="sf-brand">
       <a href="<?= url('/') ?>" class="sf-logo"><img src="<?= asset('assets/img/logo.png') ?>" alt=""><span>WayloShare</span></a>
-      <p>Verified carpooling for India. Fares capped per km, every seat verified, and a women-only Pink Ride.</p>
+      <p><strong>Why Go Solo?</strong> Verified carpooling for India. Fares capped per km, every seat verified, and a women-only Pink Ride.</p>
       <span class="sf-made"><i></i>Made in Jammu, J&amp;K</span>
     </div>
     <nav class="sf-cols" aria-label="Footer">

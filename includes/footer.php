@@ -19,7 +19,7 @@ $pb = $isPink ? '110px' : ($isPost ? '40px' : '120px');
         <img src="<?= asset('assets/img/logo.png') ?>" alt="WayloShare Logo">
         <span>WayloShare</span>
       </a>
-      <p>Verified carpooling for India. Fares capped per km, every seat verified, and a women-only Pink Ride.</p>
+      <p><strong>Why Go Solo?</strong> Verified carpooling for India. Fares capped per km, every seat verified, and a women-only Pink Ride.</p>
       <span class="sf-made"><i></i>Made in Jammu, J&amp;K</span>
     </div>
     <nav class="sf-cols" aria-label="Footer">

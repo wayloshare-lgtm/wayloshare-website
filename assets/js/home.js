@@ -268,6 +268,7 @@
   const vcardRider = document.getElementById('vcard-rider');
   const vcardDriver = document.getElementById('vcard-driver');
   const vcardPink = document.getElementById('vcard-pink');
+  const vcircleGlow = document.getElementById('vcircle-glow');
 
   const seatLabels = [
     document.getElementById('vseat-1'),
@@ -280,7 +281,7 @@
   const VROLE_CONFIG = {
     rider:  { color: '#2775BA', seats: ['Driver', 'You', 'Co-rider', 'Co-rider'] },
     driver: { color: '#2D7E3C', seats: ['You', 'Rider', 'Rider', 'Rider'] },
-    pink:   { color: '#C72561', seats: ['Driver ♀', 'You ♀', 'Rider ♀', 'Rider ♀'] }
+    pink:   { color: '#E8417A', seats: ['Driver ♀', 'You ♀', 'Rider ♀', 'Rider ♀'] }
   };
 
   function selectVRole(role) {
@@ -293,6 +294,7 @@
     if (vcardRider)  vcardRider.style.display  = (role === 'rider') ? 'block' : 'none';
     if (vcardDriver) vcardDriver.style.display = (role === 'driver') ? 'block' : 'none';
     if (vcardPink)   vcardPink.style.display   = (role === 'pink') ? 'block' : 'none';
+    if (vcircleGlow) vcircleGlow.style.background = cfg.color;
 
     // Update car seats
     seatRects.forEach(function (rect) {

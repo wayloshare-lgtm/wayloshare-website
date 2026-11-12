@@ -89,8 +89,12 @@ details[open] .chev{transform:rotate(45deg)}
 .f1{animation-name:fill1}.f2{animation-name:fill2}.f3{animation-name:fill3}.f4{animation-name:fill4}
 .benefit{animation-name:benefit;background:#13294B;color:#ffffff;font:700 clamp(16px,1.8vw,22px) 'Familjen Grotesk',sans-serif;padding:14px 22px;border-radius:999px;box-shadow:0 12px 30px rgba(19,41,75,0.3)}
 /* verified circle */
-.vtab{border:2px solid rgba(255,255,255,0.35);background:transparent;color:#ffffff;font:700 18px 'Mukta',sans-serif;padding:12px 22px;border-radius:16px;cursor:pointer;transition:background .2s,border-color .2s}
-.vtab[aria-selected="true"]{background:var(--tc);border-color:var(--tc)}
+.vtab{display:inline-flex;align-items:center;gap:10px;border:2px solid rgba(255,255,255,0.28);background:rgba(255,255,255,0.08);color:#ffffff;font:700 17px 'Mukta',sans-serif;padding:12px 24px;border-radius:16px;cursor:pointer;transition:all .22s cubic-bezier(.2,.8,.2,1);box-shadow:0 4px 14px rgba(0,0,0,0.18);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.vtab:hover{background:rgba(255,255,255,0.18);border-color:rgba(255,255,255,0.65);transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,0.28)}
+.vtab[aria-selected="true"]{background:var(--tc);border-color:#ffffff;color:#ffffff;box-shadow:0 8px 28px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.45);transform:translateY(-2px)}
+.vtab-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.45);transition:all .2s ease;flex-shrink:0}
+.vtab:hover .vtab-dot{background:#ffffff}
+.vtab[aria-selected="true"] .vtab-dot{background:#ffffff;box-shadow:0 0 10px #ffffff;transform:scale(1.2)}
 @keyframes scanY{0%{top:6%}50%{top:90%}100%{top:6%}}
 @keyframes checkIn{from{opacity:0;transform:translateX(-18px)}to{opacity:1;transform:none}}
 @keyframes stamp{0%,60%{opacity:0;transform:rotate(-14deg) scale(2.4)}75%{opacity:1;transform:rotate(-14deg) scale(.92)}100%{opacity:.92;transform:rotate(-14deg) scale(1)}}
