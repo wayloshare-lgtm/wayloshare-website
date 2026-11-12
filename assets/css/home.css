@@ -26,8 +26,8 @@ a{color:#2775BA}a:hover{color:#1B5A93}
 .rise3{animation:rise .9s .3s cubic-bezier(.2,.8,.2,1) both}
 .blob{animation:blob 14s ease-in-out infinite}
 .road-dash{stroke-dasharray:18 16;animation:dashmove 1.2s linear infinite}
-.car{position:absolute;left:0;top:0;offset-path:path('M0,80 C100,80 140,180 240,180 C340,180 380,80 480,80 C580,80 620,180 720,180 C820,180 860,80 960,80 C1060,80 1100,180 1200,180 C1300,180 1340,80 1440,80');offset-rotate:auto;offset-anchor:34px 38px;animation:drive 16s linear infinite}
-.car2{animation-delay:-8s;animation-duration:19s}
+.car{position:absolute;left:0;top:0;offset-path:path('M0,80 C100,80 140,180 240,180 C340,180 380,80 480,80 C580,80 620,180 720,180 C820,180 860,80 960,80 C1060,80 1100,180 1200,180 C1300,180 1340,80 1440,80 C1540,80 1580,180 1680,180 C1780,180 1820,80 1920,80 C2020,80 2060,180 2160,180 C2260,180 2300,80 2400,80 C2500,80 2540,180 2640,180 C2740,180 2780,80 2880,80 C2980,80 3020,180 3120,180 C3220,180 3260,80 3360,80 C3460,80 3500,180 3600,180 C3700,180 3740,80 3840,80 C3940,80 3980,180 4080,180 C4180,180 4220,80 4320,80 C4420,80 4460,180 4560,180 C4660,180 4700,80 4800,80');offset-rotate:auto;offset-anchor:34px 38px;animation:drive 40s linear infinite}
+.car2{animation-delay:-20s;animation-duration:46s}
 .wheel{transform-box:fill-box;transform-origin:center;animation:spin .6s linear infinite}
 .marquee{animation:marquee 38s linear infinite}
 .pulse{animation:pulse 1.6s ease-out infinite}
